@@ -75,11 +75,22 @@ public class Apartments {
 
     //Methods
     public int rent(){
-        return (this.area * 1) + (this.nunberOfBalcony * 50)  + (this.numberOfBathrooms * 50);
+            return (this.area * 1) + (this.nunberOfBalcony * 50) + (this.numberOfBathrooms * 50);
     }
 
     //OVERRIDERS
 
 
+    @Override
+    public String toString() {
+        return "Apartments{" +
+                "buildingName='" + buildingName + '\'' +
+                ", model='" + model + '\'' +
+                ", aptNumber=" + aptNumber +
+                ", nunberOfBalcony=" + nunberOfBalcony +
+                ", area=" + area +
+                ", numberOfBathrooms=" + numberOfBathrooms +
+                '}';
+    }
 }
 

@@ -1,15 +1,13 @@
 import apartmentcomplex.Apartments;
 import apartmentcomplex.OneBedroomApartment;
+import apartmentcomplex.ThreeBedroomApartment;
 
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
 
-        Scanner input = new Scanner(System.in);
-        boolean isFacingGolf = input.nextBoolean();
-
-        Apartments aptOneBedroom1 = new OneBedroomApartment("Green Village","hut1",101,0,600,1);
+        Apartments aptOneBedroom1 = new OneBedroomApartment("Green Village","hut1",101,0,600,1,true);
         int aptNum1 = aptOneBedroom1.getAptNumber();
 
         int rentofHut1 = aptOneBedroom1.rent();
@@ -21,8 +19,17 @@ public class Main {
         int rentofHut2 = aptOneBedroom2.rent();
         System.out.println(rentofHut2 + " " + aptNum2);
 
-        if(aptOneBedroom1.getAptNumber() == 101){
-            System.out.println("It is handicap Apt");
-        }
+        System.out.println(aptOneBedroom1);
+        System.out.println(aptOneBedroom2);
+
+        Apartments aptThreeBedroom1 = new ThreeBedroomApartment("Green Meadows","BrickHouse1",101,3,1200,3,true);
+        int rentOFBrickHouse1 = aptThreeBedroom1.rent();
+        System.out.println(rentOFBrickHouse1);
+
+        Apartments aptThreeBedroom2 = new ThreeBedroomApartment("Green Meadows","BrickHouse1",102,3,1200,3,false);
+        int rentOFBrickHouse2 = aptThreeBedroom2.rent();
+        System.out.println(rentOFBrickHouse2);
+
+
     }
 }
