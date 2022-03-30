@@ -9,8 +9,12 @@ public class OneBedroomApartment extends Apartments {
         this.isGolfFacing = isGolfFacing;
     }
 
-    public int rent(){
-        if (isGolfFacing) {
+    public boolean getIsGolfFacing(){
+        return isGolfFacing;
+    }
+
+    public int rent(boolean isFacing){
+        if (isFacing) {
             return (this.area * 1) + (this.nunberOfBalcony * 50) + (this.numberOfBathrooms * 50) + 100;
         }
         else {
